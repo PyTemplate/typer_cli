@@ -174,13 +174,13 @@ A release should consist of the following two steps from a tested, linted, and u
 
 ```bash
 .
-├── Dockerfile
 ├── docs/
 ├── LICENSE
+├── README.md
 ├── Makefile
+├── Dockerfile
 ├── poetry.lock
 ├── pyproject.toml
-├── README.md
 ├── src
 │   └── pytemplates_typer_cli
 │       ├── core
@@ -188,8 +188,8 @@ A release should consist of the following two steps from a tested, linted, and u
 │       │   ├── module1.py
 │       │   └── module2.py
 │       ├── __init__.py
-│       ├── main.py
-│       └── __version__.py
+│       ├── __version__.py
+│       └── main.py
 └── tests
     ├── __init__.py
     ├── test_app.py
