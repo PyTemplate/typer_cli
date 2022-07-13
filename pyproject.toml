@@ -1,0 +1,85 @@
+[tool.poetry]
+name = "pytemplates_pypackage"
+version = "0.1.5"
+description = "A production ready python library template."
+repository = "https://github.com/PyTemplate/python_package"
+authors = ["crabtr26 <crabtr26@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+classifiers=[
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pytest = {version = "^7.1.2", optional = true}
+pytest-cov = {version = "^3.0.0", optional = true}
+black = {version = "^22.3.0", optional = true}
+isort = {version = "^5.10.1", optional = true}
+flake8 = {version = "^4.0.1", optional = true}
+pylint = {version = "^2.13.8", optional = true}
+mypy = {version = "^0.961", optional = true}
+pre-commit = {version = "^2.19.0", optional = true}
+Sphinx = {version = "^4.5.0", optional = true}
+sphinx-rtd-theme = {version = "^1.0.0", optional = true}
+bump2version = {version = "^1.0.1", optional = true}
+
+[tool.poetry.extras]
+test = [
+    "pytest",
+    "pytest-cov",
+]
+
+lint = [
+    "black",
+    "isort",
+    "flake8",
+    "pylint",
+    "mypy",
+    "pre-commit",
+]
+
+docs = [
+    "Sphinx",
+    "sphinx-rtd-theme",
+]
+
+# Includes all optional dependencies
+dev = [
+    "pytest",
+    "pytest-cov",
+    "black",
+    "isort",
+    "flake8",
+    "pylint",
+    "mypy",
+    "pre-commit",
+    "Sphinx",
+    "sphinx-rtd-theme",
+    "bump2version",
+]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+minversion = "7.1"
+addopts = "-rf -vv --cov=src --cov-report=term-missing"
+testpaths = [
+    "tests",
+]
+
+[tool.isort]
+profile = "black"
+
+[tool.coverage.report]
+exclude_lines = [
+    "if __name__ == .__main__.:"
+]

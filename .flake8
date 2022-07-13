@@ -1,0 +1,11 @@
+[flake8]
+jobs = 4
+max-line-length = 88
+exclude = .git,__pycache__
+max-complexity = 10
+# D203 - blank line before docstring
+# E203 - broken whitespace check for ":", disagrees with black
+ignore = D203,E203
+per-file-ignores =
+    # imported but unused
+    __init__.py: F401
