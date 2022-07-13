@@ -62,12 +62,20 @@ poetry add pytemplates_typer_cli
 
 ## Usage
 
-From a terminal:
+### Using the python package installation
 
 ```bash
 pytemplates hello user
 pytemplates goodbye user
-pytemplates whoami
+pytemplates version
+```
+
+### Using Docker
+
+```bash
+docker run --rm pytemplates hello user
+docker run --rm pytemplates goodbye user
+docker run --rm pytemplates version
 ```
 
 ## Developer Setup
