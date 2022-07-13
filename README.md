@@ -80,7 +80,7 @@ docker run --rm pytemplates/typer_cli version
 
 ## Developer Setup
 
-### Using poetry
+To install the package using `poetry`:
 
 ```bash
 poetry install
@@ -92,7 +92,7 @@ Install optional dependencies using the `--extras` flag:
 poetry install --extras=environment
 ```
 
-### Using pip
+To install the package using `pip`:
 
 ```bash
 pip install .
