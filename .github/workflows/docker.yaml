@@ -20,7 +20,7 @@ jobs:
       id: meta
       uses: docker/metadata-action@v4
       with:
-        images: crabtr26/pytemplates
+        images: typer_cli
         tags: |
           type=schedule
           type=semver,pattern={{version}}
