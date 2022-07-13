@@ -41,7 +41,8 @@
 - Test coverage reports are generated during every commit and pull request using [coverage](https://coverage.readthedocs.io/en/6.4.1/) and [pytest-cov](https://pytest-cov.readthedocs.io/en/latest/). All reports are automatically uploaded and archived on [codecov.io](https://about.codecov.io/).
 - Unit tests are written using [pytest](https://docs.pytest.org/en/latest/) and static type checking is provided by [mypy](http://mypy-lang.org/index.html).
 - Package releases to [PyPI](https://pypi.org/) with dynamic versioning provided by [bump2version](https://github.com/c4urself/bump2version) begin automatically whenever a new tag is created in github.
-- [Sphinx](https://www.sphinx-doc.org/en/master/) documentation is automatically generated and deployed to [github pages](https://docs.github.com/en/pages) during every release.
+- Docker images are automatically published to [Docker Hub](https://hub.docker.com/) during every release. Images are tagged with a semantic version number which agrees with the git tag and the PyPI version number.
+- [Sphinx](https://www.sphinx-doc.org/en/master/) source code documentation is automatically generated and deployed to [github pages](https://docs.github.com/en/pages) during every release.
 - Release notes are automatically generated during every release using [github actions](https://docs.github.com/en/actions).
 
 ### [Source code documentation](https://pytemplate.github.io/typer_cli/)
@@ -142,7 +143,7 @@ dev = [
 ]
 ```
 
-### Developing with a local docker image
+### Developing with a local docker build:
 
 To build an image locally from the Dockerfile:
 
@@ -185,7 +186,7 @@ docker run --rm pytemplates_typer_cli version
 
 - `docker` - Build the docker image, tag it with the branch name, and publish it to dockerhub. Runs on a manual trigger in the github actions tab.
 
-- `release` - Build a package distribution, create a github release, and publish the distribution to PyPI whenever a new tag is created. Linting and testing steps must pass before the release steps can begin. Sphinx documentation is automatically published to the *sphinx-docs* branch and hosted on github pages.
+- `release` - Build a wheel distribution, build a docker image, create a github release, and publish to PyPI/ Docker Hub whenever a new tag is created. Linting and testing steps must pass before the release steps can begin. Sphinx documentation is automatically published to the *sphinx-docs* branch and hosted on github pages. All github release tags, docker image tags, and PyPI version numbers are in agreement with one another and follow semantic versioning standrads.
 
 ## Releases
 
