@@ -186,7 +186,7 @@ docker run --rm pytemplates_typer_cli version
 
 - `docker` - Build the docker image, tag it with the branch name, and publish it to dockerhub. Runs on a manual trigger in the github actions tab.
 
-- `release` - Build a wheel distribution, build a docker image, create a github release, and publish to PyPI/ Docker Hub whenever a new tag is created. Linting and testing steps must pass before the release steps can begin. Sphinx documentation is automatically published to the *sphinx-docs* branch and hosted on github pages. All github release tags, docker image tags, and PyPI version numbers are in agreement with one another and follow semantic versioning standrads.
+- `release` - Build a wheel distribution, build a docker image, create a github release, and publish to PyPI and Docker Hub whenever a new tag is created. Linting and testing steps must pass before the release steps can begin. Sphinx documentation is automatically published to the *sphinx-docs* branch and hosted on github pages. All github release tags, docker image tags, and PyPI version numbers are in agreement with one another and follow semantic versioning standrads.
 
 ## Releases
 
