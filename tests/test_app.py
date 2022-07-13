@@ -1,5 +1,6 @@
 from typer.testing import CliRunner
 
+from pytemplates_typer_cli import __version__
 from pytemplates_typer_cli.main import app
 
 runner = CliRunner()
@@ -17,9 +18,7 @@ def test_goodbye():
     assert "Goodbye Jacob!" in result.stdout
 
 
-def test_whoami():
-    result = runner.invoke(app, ["whoami"])
+def test_version():
+    result = runner.invoke(app, ["version"])
     assert result.exit_code == 0
-    assert "Host Name" in result.stdout
-    assert "Host IP" in result.stdout
-    assert "Process ID" in result.stdout
+    assert __version__ in result.stdout

@@ -1,8 +1,6 @@
-import os
-import socket
-
 import typer
 
+from pytemplates_typer_cli import __version__
 from pytemplates_typer_cli.core.module1 import greet
 from pytemplates_typer_cli.core.module2 import wish_farewell
 
@@ -20,10 +18,8 @@ def goodbye(user: str):
 
 
 @app.command()
-def whoami():
-    typer.echo(f"Host Name: {socket.gethostname()}")
-    typer.echo(f"Host IP: {socket.gethostbyname(socket.gethostname())}")
-    typer.echo(f"Process ID: {os.getpid()}")
+def version():
+    typer.echo(__version__)
 
 
 if __name__ == "__main__":
