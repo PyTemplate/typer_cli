@@ -9,5 +9,20 @@ plugins:
 
 nav:
     - Home: index.md
+    - User Guide:
+      - Installation: user_guide/installation.md
+      - Usage: user_guide/usage.md
+    - Developer Guide:
+      - Developer Setup: developer_guide/developer_setup.md
+      - Commands: developer_guide/commands.md
+      - Workflows: developer_guide/workflows.md
+      - Releases: developer_guide/releases.md
+    - App Reference:
+      - App Reference: app_reference/app.md
     - Code Reference:
-        - Module1: module1.md
+      - Core:
+        - Module1: code_reference/module1.md
+        - Module2: code_reference/module2.md
+    - Extras:
+      - File Tree: extras/file_tree.md
+      - Credits: extras/credits.md

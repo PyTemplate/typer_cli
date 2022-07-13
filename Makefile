@@ -47,7 +47,7 @@ clean:  ## remove all build, testing, and static documentation files
 	rm -fr htmlcov/
 	rm -fr .pytest_cache
 	rm -fr .mypy_cache
-	$(MAKE) -C docs clean
+	rm -fr site
 
 test: ## run the tests
 	pytest
@@ -65,15 +65,12 @@ check: ## run the tests and linting tools
 build: ## build the docker image
 	docker build . -t pytemplates_typer_cli
 
-gen-docs: ## generate Sphinx HTML documentation
-	rm -f docs/source/pytemplates_typer_cli*.rst
-	rm -f docs/source/modules.rst
-	sphinx-apidoc -o docs/source src/pytemplates_typer_cli
-	$(MAKE) -C docs html
+gen-docs: ## generate HTML documentation
+	mkdocs build
 
-docs: ## generate Sphinx HTML documentation and serve it to the browser
-	make gen-docs
-	$(BROWSER) docs/build/html/index.html
+docs: ## generate HTML documentation and serve it to the browser
+	mkdocs build
+	mkdocs serve
 
 pre-release: ## bump the version and create the release tag
 	make check

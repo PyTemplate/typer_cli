@@ -380,6 +380,30 @@ Markdown = ">=3.3"
 mkdocs = ">=1.1"
 
 [[package]]
+name = "mkdocs-material"
+version = "8.3.9"
+description = "Documentation that simply works"
+category = "main"
+optional = true
+python-versions = ">=3.7"
+
+[package.dependencies]
+jinja2 = ">=3.0.2"
+markdown = ">=3.2"
+mkdocs = ">=1.3.0"
+mkdocs-material-extensions = ">=1.0.3"
+pygments = ">=2.12"
+pymdown-extensions = ">=9.4"
+
+[[package]]
+name = "mkdocs-material-extensions"
+version = "1.0.3"
+description = "Extension pack for Python Markdown."
+category = "main"
+optional = true
+python-versions = ">=3.6"
+
+[[package]]
 name = "mkdocstrings"
 version = "0.19.0"
 description = "Automatic documentation from sources, for MkDocs."
@@ -920,15 +944,15 @@ docs = ["sphinx", "jaraco.packaging (>=9)", "rst.linker (>=1.9)", "jaraco.tideli
 testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-cov", "pytest-enabler (>=1.3)", "jaraco.itertools", "func-timeout", "pytest-black (>=0.3.7)", "pytest-mypy (>=0.9.1)"]
 
 [extras]
-dev = ["pytest", "pytest-cov", "black", "isort", "flake8", "pylint", "mypy", "pre-commit", "Sphinx", "sphinx-rtd-theme", "mkdocs", "mkdocstrings-python", "mkdocstrings", "bump2version"]
-docs = ["Sphinx", "sphinx-rtd-theme", "mkdocs", "mkdocstrings-python", "mkdocstrings"]
+dev = ["pytest", "pytest-cov", "black", "isort", "flake8", "pylint", "mypy", "pre-commit", "Sphinx", "sphinx-rtd-theme", "mkdocs", "mkdocs-material", "mkdocstrings-python", "mkdocstrings", "bump2version"]
+docs = ["Sphinx", "sphinx-rtd-theme", "mkdocs", "mkdocs-material", "mkdocstrings-python", "mkdocstrings"]
 lint = ["black", "isort", "flake8", "pylint", "mypy", "pre-commit"]
 test = ["pytest", "pytest-cov"]
 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "fb71d00009d25449fafbfa3ad46d4522fd79f666ff57f2e5ac7eb2d777b16732"
+content-hash = "df6dc8b5cc934ae0ec866eb3d8c3bfa70c78ac8f2a866bae08671d3741980a25"
 
 [metadata.files]
 alabaster = [
@@ -1098,6 +1122,8 @@ mccabe = [
 mergedeep = []
 mkdocs = []
 mkdocs-autorefs = []
+mkdocs-material = []
+mkdocs-material-extensions = []
 mkdocstrings = []
 mkdocstrings-python = []
 mypy = [
