@@ -142,7 +142,7 @@ dev = [
 
 - `make lint` - Run the linting tools. Includes pre-commit hooks, black, isort, flake8, pylint, and mypy.
 
-- `make check` - Run the test and lint commands, followed by the clean command.
+- `make check` - Run the test and lint commands.
 
 - `make build` - Build a docker image using the Dockerfile.
 
