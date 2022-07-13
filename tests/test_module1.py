@@ -1,4 +1,4 @@
-from pytemplates_pypackage.core.module1 import greet
+from pytemplates_typer_cli.core.module1 import greet
 
 
 def test_greet():

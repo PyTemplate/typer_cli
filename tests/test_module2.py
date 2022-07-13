@@ -1,4 +1,4 @@
-from pytemplates_pypackage.core.module2 import wish_farewell
+from pytemplates_typer_cli.core.module2 import wish_farewell
 
 
 def test_wish_farewell():

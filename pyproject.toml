@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "pytemplates_pypackage"
-version = "0.1.5"
-description = "A production ready python library template."
-repository = "https://github.com/PyTemplate/python_package"
+name = "pytemplates_typer_cli"
+version = "0.0.0"
+description = "A production ready python CLI template."
+repository = "https://github.com/PyTemplate/typer_cli"
 authors = ["crabtr26 <crabtr26@gmail.com>"]
 license = "MIT"
 readme = "README.md"
@@ -18,6 +18,7 @@ classifiers=[
 
 [tool.poetry.dependencies]
 python = "^3.8"
+typer = "^0.4.1"
 pytest = {version = "^7.1.2", optional = true}
 pytest-cov = {version = "^3.0.0", optional = true}
 black = {version = "^22.3.0", optional = true}
@@ -64,6 +65,9 @@ dev = [
     "sphinx-rtd-theme",
     "bump2version",
 ]
+
+[tool.poetry.scripts]
+pytemplates = "pytemplates_typer_cli.main:app"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
