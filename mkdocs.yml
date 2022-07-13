@@ -1,0 +1,13 @@
+site_name: Pytemplates Typer CLI Documentation
+
+theme:
+  name: "readthedocs"
+
+plugins:
+  - search
+  - mkdocstrings
+
+nav:
+    - Home: index.md
+    - Code Reference:
+        - Module1: module1.md
