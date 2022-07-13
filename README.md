@@ -54,12 +54,6 @@ To install the package using `pip`:
 pip install pytemplates_typer_cli
 ```
 
-To add the package as a dependency using `poetry`:
-
-```bash
-poetry add pytemplates_typer_cli
-```
-
 To download the CLI application using `docker`:
 
 ```bash
