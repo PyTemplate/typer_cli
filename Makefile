@@ -63,6 +63,9 @@ check: ## run the tests and linting tools, then cleanup
 	make lint
 	make clean
 
+build: ## build the docker image
+	docker build . -t pytemplates
+
 gen-docs: ## generate Sphinx HTML documentation
 	rm -f docs/source/pytemplates_typer_cli*.rst
 	rm -f docs/source/modules.rst

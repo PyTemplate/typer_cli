@@ -21,10 +21,11 @@ COPY poetry.lock pyproject.toml ./
 # Install only dependencies first so they are cached by Docker:
 RUN poetry install --no-root --no-dev
 
-# Copy in the source code and install it into the virtualenv:
+# Copy in the source code:
 COPY src/ src/
 COPY README.md ./
 
+# Install it into the virtualenv
 # Installing with pip since poetry does editable installs by default
 SHELL ["/bin/bash", "-c"]
 RUN source .venv/bin/activate && pip install --upgrade pip

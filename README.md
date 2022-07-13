@@ -147,6 +147,8 @@ dev = [
 
 - `make check` - Run the test and lint commands, followed by the clean command.
 
+- `make build` - Build a docker image of the application from the Dockerfile.
+
 - `make gen-docs` - Generate Sphinx HTML documentation.
 
 - `make docs` - Generate Sphinx HTML documentation and serve it to the browser.
