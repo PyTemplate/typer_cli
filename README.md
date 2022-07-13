@@ -143,7 +143,7 @@ dev = [
 ]
 ```
 
-### Developing with a local docker build:
+### Using a local docker build:
 
 To build an image locally from the Dockerfile:
 
