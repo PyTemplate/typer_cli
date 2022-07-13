@@ -20,6 +20,6 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: pytemplates/typer_cli:latest
+          tags: pytemplate/typer_cli:latest
           secrets: |
             GIT_AUTH_TOKEN=${{ secrets.PAT }}
