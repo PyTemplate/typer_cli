@@ -26,7 +26,7 @@
   </a>
 
   <a href="https://pypi.org/project/pytemplates-pypackage/">
-    <img src="https://badge.fury.io/py/pytemplates_pypackage.svg" alt="PyPI version">
+    <img src="https://badge.fury.io/py/pytemplates_typer_cli.svg" alt="PyPI version">
   </a>
 </p>
 
@@ -51,13 +51,13 @@
 To install the package using `pip`:
 
 ```bash
-pip install pytemplates_pypackage
+pip install pytemplates_typer_cli
 ```
 
 To add the package as a dependency using `poetry`:
 
 ```bash
-poetry add pytemplates_pypackage
+poetry add pytemplates_typer_cli
 ```
 
 ## Usage
@@ -65,11 +65,11 @@ poetry add pytemplates_pypackage
 From a `.py` file:
 
 ```python
-import pytemplates_pypackage
-print(pytemplates_pypackage.__version__)
-pytemplates_pypackage.greet(user="Jacob")
+import pytemplates_typer_cli
+print(pytemplates_typer_cli.__version__)
+pytemplates_typer_cli.greet(user="Jacob")
 
-from pytemplates_pypackage import wish_farewell
+from pytemplates_typer_cli import wish_farewell
 wish_farewell(user="Jacob")
 ```
 
@@ -175,6 +175,7 @@ A release should consist of the following two steps from a tested, linted, and u
 
 ```bash
 .
+├── Dockerfile
 ├── docs/
 ├── LICENSE
 ├── Makefile
@@ -182,15 +183,17 @@ A release should consist of the following two steps from a tested, linted, and u
 ├── pyproject.toml
 ├── README.md
 ├── src
-│   └── pytemplates_pypackage
+│   └── pytemplates_typer_cli
 │       ├── core
 │       │   ├── __init__.py
 │       │   ├── module1.py
 │       │   └── module2.py
 │       ├── __init__.py
+│       ├── main.py
 │       └── __version__.py
 └── tests
     ├── __init__.py
+    ├── test_app.py
     ├── test_module1.py
     └── test_module2.py
 ```

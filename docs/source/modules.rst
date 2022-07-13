@@ -1,7 +1,7 @@
-pytemplates_pypackage
+pytemplates_typer_cli
 =====================
 
 .. toctree::
    :maxdepth: 4
 
-   pytemplates_pypackage
+   pytemplates_typer_cli

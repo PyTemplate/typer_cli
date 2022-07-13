@@ -64,9 +64,9 @@ check: ## run the tests and linting tools, then cleanup
 	make clean
 
 gen-docs: ## generate Sphinx HTML documentation
-	rm -f docs/source/pytemplates_pypackage*.rst
+	rm -f docs/source/pytemplates_typer_cli*.rst
 	rm -f docs/source/modules.rst
-	sphinx-apidoc -o docs/source src/pytemplates_pypackage
+	sphinx-apidoc -o docs/source src/pytemplates_typer_cli
 	$(MAKE) -C docs html
 
 docs: ## generate Sphinx HTML documentation and serve it to the browser
@@ -80,4 +80,4 @@ pre-release: ## bump the version and create the release tag
 	bump2version $(increment)
 	git describe --tags --abbrev=0
 	head pyproject.toml | grep version
-	cat src/pytemplates_pypackage/__version__.py
+	cat src/pytemplates_typer_cli/__version__.py
