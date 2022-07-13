@@ -60,6 +60,12 @@ To add the package as a dependency using `poetry`:
 poetry add pytemplates_typer_cli
 ```
 
+To install the CLI application using `docker`:
+
+```bash
+docker pull pytemplates/typer_cli:latest
+```
+
 ## Usage
 
 Using the python package installation:
@@ -73,9 +79,9 @@ pytemplates version
 Using the docker image:
 
 ```bash
-docker run --rm pytemplates hello user
-docker run --rm pytemplates goodbye user
-docker run --rm pytemplates version
+docker run --rm pytemplates/typer_cli hello user
+docker run --rm pytemplates/typer_cli goodbye user
+docker run --rm pytemplates/typer_cli version
 ```
 
 ## Developer Setup
@@ -152,7 +158,7 @@ dev = [
 
 - `make check` - Run the test and lint commands.
 
-- `make build` - Build a docker image using the Dockerfile.
+- `make build` - Build a docker image locally using the Dockerfile. The image will be named *pytemplates_typer_cli*.
 
 - `make gen-docs` - Generate Sphinx HTML documentation.
 
@@ -167,6 +173,8 @@ dev = [
 - `lint` - Run the linting tools on every push/pull_request to the *main* branch. Includes pre-commit hooks, black, isort, flake8, pylint, and mypy. Optional manual trigger in the github actions tab.
 
 - `docs` - Build the sphinx documentation, publish to the *sphinx-docs* branch, and release to github pages. Runs on a manual trigger in the github actions tab.
+
+- `docker` - Build the docker image, tag it with the branch name, and publish it to dockerhub. Runs on a manual trigger in the github actions tab.
 
 - `release` - Build a package distribution, create a github release, and publish the distribution to PyPI whenever a new tag is created. Linting and testing steps must pass before the release steps can begin. Sphinx documentation is automatically published to the *sphinx-docs* branch and hosted on github pages.
 

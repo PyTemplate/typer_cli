@@ -132,7 +132,7 @@ jobs:
       id: meta
       uses: docker/metadata-action@v4
       with:
-        images: crabtr26/pytemplates_typer_cli
+        images: pytemplates/typer_cli
         tags: |
           type=ref,event=branch
           type=semver,pattern={{version}}
