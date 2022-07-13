@@ -60,7 +60,7 @@ To add the package as a dependency using `poetry`:
 poetry add pytemplates_typer_cli
 ```
 
-To install the CLI application using `docker`:
+To download the CLI application using `docker`:
 
 ```bash
 docker pull pytemplates/typer_cli:latest
