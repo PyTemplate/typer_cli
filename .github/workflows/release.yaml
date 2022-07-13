@@ -132,4 +132,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: PyTemplate/pytemplates_typer_cli:latest
+          tags: pytemplates/typer_cli:latest
