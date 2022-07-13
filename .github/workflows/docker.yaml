@@ -20,7 +20,9 @@ jobs:
       id: meta
       uses: docker/metadata-action@v4
       with:
-        images: crabtr26/pytemplates
+        images: typer_cli
+        tags: |
+          type=semver,pattern={{version}}
 
     - name: Build and push Docker image
       uses: docker/build-push-action@v3
