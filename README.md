@@ -142,6 +142,21 @@ dev = [
 ]
 ```
 
+### Developing with a local docker image
+
+To build an image locally from the Dockerfile:
+
+```bash
+make build
+```
+
+To run the image:
+```bash
+docker run --rm pytemplates_typer_cli hello user
+docker run --rm pytemplates_typer_cli goodbye user
+docker run --rm pytemplates_typer_cli version
+```
+
 ## Commands
 
 - `make clean` - Remove all build, testing, and static documentation files.
