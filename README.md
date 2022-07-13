@@ -81,6 +81,8 @@ docker run --rm pytemplates/typer_cli version
 
 ## Developer Setup
 
+To begin local development, clone this repository and use one of the following methods to build it. Commands should be executed from inside of the project home (i.e. the location of this README).
+
 ### Using poetry:
 
 ```bash
