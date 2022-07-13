@@ -5,24 +5,24 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/PyTemplate/python_package/actions/workflows/test.yaml">
-    <img src="https://github.com/PyTemplate/python_package/actions/workflows/test.yaml/badge.svg" alt="Test status">
+  <a href="https://github.com/PyTemplate/typer_cli/actions/workflows/test.yaml">
+    <img src="https://github.com/PyTemplate/typer_cli/actions/workflows/test.yaml/badge.svg" alt="Test status">
   </a>
 
-  <a href="https://github.com/PyTemplate/python_package/actions/workflows/lint.yaml">
-    <img src="https://github.com/PyTemplate/python_package/actions/workflows/lint.yaml/badge.svg" alt="Linting status">
+  <a href="https://github.com/PyTemplate/typer_cli/actions/workflows/lint.yaml">
+    <img src="https://github.com/PyTemplate/typer_cli/actions/workflows/lint.yaml/badge.svg" alt="Linting status">
   </a>
 
-  <!-- <a href="https://github.com/PyTemplate/python_package/actions/workflows/release.yaml">
-    <img src="https://github.com/PyTemplate/python_package/actions/workflows/release.yaml/badge.svg" alt="Release status">
+  <!-- <a href="https://github.com/PyTemplate/typer_cli/actions/workflows/release.yaml">
+    <img src="https://github.com/PyTemplate/typer_cli/actions/workflows/release.yaml/badge.svg" alt="Release status">
   </a> -->
 
-  <a href="https://results.pre-commit.ci/latest/github/PyTemplate/python_package/main">
-    <img src="https://results.pre-commit.ci/badge/github/PyTemplate/python_package/main.svg" alt="pre-commit.ci status">
+  <a href="https://results.pre-commit.ci/latest/github/PyTemplate/typer_cli/main">
+    <img src="https://results.pre-commit.ci/badge/github/PyTemplate/typer_cli/main.svg" alt="pre-commit.ci status">
   </a>
 
-  <a href="https://codecov.io/gh/PyTemplate/python_package">
-    <img src="https://codecov.io/gh/PyTemplate/python_package/branch/main/graph/badge.svg?token=HG1NQ8HRA4" alt="Code coverage status">
+  <a href="https://codecov.io/gh/PyTemplate/typer_cli">
+    <img src="https://codecov.io/gh/PyTemplate/typer_cli/branch/main/graph/badge.svg?token=HG1NQ8HRA4" alt="Code coverage status">
   </a>
 
   <a href="https://pypi.org/project/pytemplates-pypackage/">
@@ -44,7 +44,7 @@
 - [Sphinx](https://www.sphinx-doc.org/en/master/) documentation is automatically generated and deployed to [github pages](https://docs.github.com/en/pages) during every release.
 - Release notes are automatically generated during every release using [github actions](https://docs.github.com/en/actions).
 
-### [Source code documentation](https://pytemplate.github.io/python_package/)
+### [Source code documentation](https://pytemplate.github.io/typer_cli/)
 
 ## Installation
 
