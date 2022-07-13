@@ -62,7 +62,7 @@ poetry add pytemplates_typer_cli
 
 ## Usage
 
-### Using the python package installation
+Using the python package installation:
 
 ```bash
 pytemplates hello user
@@ -70,7 +70,7 @@ pytemplates goodbye user
 pytemplates version
 ```
 
-### Using Docker
+Using the docker image:
 
 ```bash
 docker run --rm pytemplates hello user
