@@ -25,7 +25,7 @@
     <img src="https://codecov.io/gh/PyTemplate/typer_cli/branch/main/graph/badge.svg?token=HG1NQ8HRA4" alt="Code coverage status">
   </a>
 
-  <a href="https://pypi.org/project/pytemplates-pypackage/">
+  <a href="https://pypi.org/project/pytemplates-typer-cli/">
     <img src="https://badge.fury.io/py/pytemplates_typer_cli.svg" alt="PyPI version">
   </a>
 </p>
