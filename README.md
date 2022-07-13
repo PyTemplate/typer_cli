@@ -62,15 +62,12 @@ poetry add pytemplates_typer_cli
 
 ## Usage
 
-From a `.py` file:
+From a terminal:
 
-```python
-import pytemplates_typer_cli
-print(pytemplates_typer_cli.__version__)
-pytemplates_typer_cli.greet(user="Jacob")
-
-from pytemplates_typer_cli import wish_farewell
-wish_farewell(user="Jacob")
+```bash
+pytemplates hello user
+pytemplates goodbye user
+pytemplates whoami
 ```
 
 ## Developer Setup
@@ -147,7 +144,7 @@ dev = [
 
 - `make check` - Run the test and lint commands, followed by the clean command.
 
-- `make build` - Build a docker image of the application from the Dockerfile.
+- `make build` - Build a docker image using the Dockerfile.
 
 - `make gen-docs` - Generate Sphinx HTML documentation.
 
