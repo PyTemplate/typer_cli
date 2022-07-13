@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pytemplates_typer_cli"
-version = "0.0.4"
+version = "0.0.5"
 description = "A production ready python CLI template."
 repository = "https://github.com/PyTemplate/typer_cli"
 authors = ["crabtr26 <crabtr26@gmail.com>"]
