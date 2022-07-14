@@ -81,7 +81,7 @@ docker run --rm pytemplates/typer_cli version
 
 ## Developer Setup
 
-To begin local development, clone the PyTemplates/typer_cli repository and use one of the following methods to build it. Commands should be executed from inside of the project home folder.
+To begin local development, clone the [PyTemplates/typer_cli](https://github.com/PyTemplate/typer_cli) repository and use one of the following methods to build it. Commands should be executed from inside of the project home folder.
 
 ### Using poetry
 
