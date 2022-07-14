@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Developer Setup - Pytemplates Typer CLI Documentation</title>
+    <title>Developer Setup - Pytemplates - Typer CLI</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
@@ -32,7 +32,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href="../.." class="icon icon-home"> Pytemplates Typer CLI Documentation
+          <a href="../.." class="icon icon-home"> Pytemplates - Typer CLI
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -56,13 +56,13 @@
               <ul class="current">
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Developer Setup</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#using-poetry">Using poetry:</a>
+    <li class="toctree-l2"><a class="reference internal" href="#using-poetry">Using poetry</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#using-pip">Using pip:</a>
+    <li class="toctree-l2"><a class="reference internal" href="#using-pip">Using pip</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#environments">Environments</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#using-a-local-docker-build">Using a local docker build:</a>
+    <li class="toctree-l2"><a class="reference internal" href="#using-a-local-docker-build">Using a local docker build</a>
     </li>
     </ul>
                   </li>
@@ -103,7 +103,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../..">Pytemplates Typer CLI Documentation</a>
+          <a href="../..">Pytemplates - Typer CLI</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -112,6 +112,8 @@
     <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
           <li>Developer Guide &raquo;</li><li>Developer Setup</li>
     <li class="wy-breadcrumbs-aside">
+        <a href="https://github.com/PyTemplate/typer_cli/edit/main/docs/developer_guide/developer_setup.md"
+          class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -121,14 +123,14 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="developer-setup">Developer Setup</h1>
-<p>To begin local development, clone this repository and use one of the following methods to build it. Commands should be executed from inside of the project home folder (i.e. the location of this README).</p>
-<h2 id="using-poetry">Using poetry:</h2>
+<p>To begin local development, clone the <a href="https://github.com/PyTemplate/typer_cli">PyTemplates/typer_cli</a> repository and use one of the following methods to build it. Commands should be executed from inside of the project home folder.</p>
+<h2 id="using-poetry">Using poetry</h2>
 <pre><code class="language-bash">poetry install
 </code></pre>
 <p>Install optional dependencies using the <code>--extras</code> flag:</p>
 <pre><code class="language-bash">poetry install --extras=environment
 </code></pre>
-<h2 id="using-pip">Using pip:</h2>
+<h2 id="using-pip">Using pip</h2>
 <pre><code class="language-bash">pip install .
 </code></pre>
 <p>Install optional dependencies using square brackets:</p>
@@ -150,8 +152,10 @@ lint = [
 ]
 
 docs = [
-    &quot;Sphinx&quot;,
-    &quot;sphinx-rtd-theme&quot;,
+    &quot;mkdocs&quot;,
+    &quot;mkdocstrings&quot;,
+    &quot;mkdocstrings-python&quot;,
+    &quot;mkdocs-material&quot;,
 ]
 
 # Includes all optional dependencies
@@ -164,12 +168,14 @@ dev = [
     &quot;pylint&quot;,
     &quot;mypy&quot;,
     &quot;pre-commit&quot;,
-    &quot;Sphinx&quot;,
-    &quot;sphinx-rtd-theme&quot;,
+    &quot;mkdocs&quot;,
+    &quot;mkdocstrings&quot;,
+    &quot;mkdocstrings-python&quot;,
+    &quot;mkdocs-material&quot;,
     &quot;bump2version&quot;,
 ]
 </code></pre>
-<h2 id="using-a-local-docker-build">Using a local docker build:</h2>
+<h2 id="using-a-local-docker-build">Using a local docker build</h2>
 <p>To build an image locally from the Dockerfile:</p>
 <pre><code class="language-bash">make build
 </code></pre>
@@ -204,6 +210,10 @@ docker run --rm pytemplates_typer_cli version
 
   <div class="rst-versions" role="note" aria-label="Versions">
   <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/PyTemplate/typer_cli" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
     
     
       <span><a href="../../user_guide/usage/" style="color: #fcfcfc">&laquo; Previous</a></span>
