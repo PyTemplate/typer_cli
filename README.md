@@ -42,7 +42,7 @@
 - Unit tests are written using [pytest](https://docs.pytest.org/en/latest/) and static type checking is provided by [mypy](http://mypy-lang.org/index.html).
 - Package releases to [PyPI](https://pypi.org/) with dynamic versioning provided by [bump2version](https://github.com/c4urself/bump2version) begin automatically whenever a new tag is created in github.
 - Docker images are automatically published to [Docker Hub](https://hub.docker.com/) during every release. Images are tagged with a semantic version number which agrees with the git tag and the PyPI version number.
-- [Sphinx](https://www.sphinx-doc.org/en/master/) source code documentation is automatically generated and deployed to [github pages](https://docs.github.com/en/pages) during every release.
+- Documentation is built using [mkdocs](https://www.mkdocs.org/) and [mkdocstrings](https://mkdocstrings.github.io/). Automatically deployed to [github pages](https://docs.github.com/en/pages) during every release.
 - Release notes are automatically generated during every release using [github actions](https://docs.github.com/en/actions).
 
 ### [Source code documentation](https://pytemplate.github.io/typer_cli/)
@@ -125,8 +125,10 @@ lint = [
 ]
 
 docs = [
-    "Sphinx",
-    "sphinx-rtd-theme",
+    "mkdocs",
+    "mkdocstrings",
+    "mkdocstrings-python",
+    "mkdocs-material",
 ]
 
 # Includes all optional dependencies
@@ -139,8 +141,10 @@ dev = [
     "pylint",
     "mypy",
     "pre-commit",
-    "Sphinx",
-    "sphinx-rtd-theme",
+    "mkdocs",
+    "mkdocstrings",
+    "mkdocstrings-python",
+    "mkdocs-material",
     "bump2version",
 ]
 ```
@@ -172,9 +176,9 @@ docker run --rm pytemplates_typer_cli version
 
 - `make build` - Build a docker image locally using the Dockerfile. The image will be named *pytemplates_typer_cli*.
 
-- `make gen-docs` - Generate Sphinx HTML documentation.
+- `make gen-docs` - Generate HTML documentation site.
 
-- `make docs` - Generate Sphinx HTML documentation and serve it to the browser.
+- `make docs` - Generate HTML documentation and serve it to the browser.
 
 - `make pre-release increment={major/minor/patch}` - Bump the version and create a release tag. Should only be run from the *main* branch. Passes the increment value to bump2version to create a new version number dynamically. The new version number will be added to *\__version__.py* and *pyproject.toml* and a new commit will be logged. The tag will be created from the new commit.
 
@@ -184,11 +188,11 @@ docker run --rm pytemplates_typer_cli version
 
 - `lint` - Run the linting tools on every push/pull_request to the *main* branch. Includes pre-commit hooks, black, isort, flake8, pylint, and mypy. Optional manual trigger in the github actions tab.
 
-- `docs` - Build the sphinx documentation, publish to the *sphinx-docs* branch, and release to github pages. Runs on a manual trigger in the github actions tab.
+- `docs` - Build the documentation, publish to the *docs* branch, and release to github pages. Runs on a manual trigger in the github actions tab.
 
 - `docker` - Build the docker image, tag it with the branch name, and publish it to dockerhub. Runs on a manual trigger in the github actions tab.
 
-- `release` - Build a wheel distribution, build a docker image, create a github release, and publish to PyPI and Docker Hub whenever a new tag is created. Linting and testing steps must pass before the release steps can begin. Sphinx documentation is automatically published to the *sphinx-docs* branch and hosted on github pages. All github release tags, docker image tags, and PyPI version numbers are in agreement with one another and follow semantic versioning standrads.
+- `release` - Build a wheel distribution, build a docker image, create a github release, and publish to PyPI and Docker Hub whenever a new tag is created. Linting and testing steps must pass before the release steps can begin. Documentation is automatically published to the *docs* branch and hosted on github pages. All github release tags, docker image tags, and PyPI version numbers are in agreement with one another and follow semantic versioning standrads.
 
 ## Releases
 
@@ -229,10 +233,10 @@ A release should consist of the following two steps from a tested, linted, and u
 
 ### Other python package templates
 
-- https://github.com/waynerv/cookiecutter-pypackage
-- https://github.com/AllenCellModeling/cookiecutter-pypackage
+- [https://github.com/waynerv/cookiecutter-pypackage](https://github.com/waynerv/cookiecutter-pypackage)
+- [https://github.com/AllenCellModeling/cookiecutter-pypackage](https://github.com/AllenCellModeling/cookiecutter-pypackage)
 
 ### Actions
 
-- https://github.com/JamesIves/github-pages-deploy-action
-- https://github.com/softprops/action-gh-release
+- [https://github.com/JamesIves/github-pages-deploy-action](https://github.com/JamesIves/github-pages-deploy-action)
+- [https://github.com/softprops/action-gh-release](https://github.com/softprops/action-gh-release)
