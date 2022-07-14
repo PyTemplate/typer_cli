@@ -177,7 +177,7 @@ docker run --rm pytemplates_typer_cli version
 
 - `make build` - Build a docker image locally using the Dockerfile. The image will be named *pytemplates_typer_cli*.
 
-- `make gen-docs` - Generate HTML documentation site.
+- `make gen-docs` - Generate HTML documentation.
 
 - `make docs` - Generate HTML documentation and serve it to the browser.
 
