@@ -45,7 +45,7 @@
 - Documentation is built using [mkdocs](https://www.mkdocs.org/) and [mkdocstrings](https://mkdocstrings.github.io/). Automatically deployed to [github pages](https://docs.github.com/en/pages) during every release.
 - Release notes are automatically generated during every release using [github actions](https://docs.github.com/en/actions).
 
-### [Source code documentation](https://pytemplate.github.io/typer_cli/)
+### [Full Documentation](https://pytemplate.github.io/typer_cli/)
 
 ## Installation
 
@@ -83,7 +83,7 @@ docker run --rm pytemplates/typer_cli version
 
 To begin local development, clone this repository and use one of the following methods to build it. Commands should be executed from inside of the project home folder (i.e. the location of this README).
 
-### Using poetry:
+### Using poetry
 
 ```bash
 poetry install
@@ -95,7 +95,7 @@ Install optional dependencies using the `--extras` flag:
 poetry install --extras=environment
 ```
 
-### Using pip:
+### Using pip
 
 ```bash
 pip install .
@@ -149,7 +149,7 @@ dev = [
 ]
 ```
 
-### Using a local docker build:
+### Using a local docker build
 
 To build an image locally from the Dockerfile:
 
@@ -158,6 +158,7 @@ make build
 ```
 
 To run the image:
+
 ```bash
 docker run --rm pytemplates_typer_cli hello user
 docker run --rm pytemplates_typer_cli goodbye user
