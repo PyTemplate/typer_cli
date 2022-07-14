@@ -1,8 +1,8 @@
 # Developer Setup
 
-To begin local development, clone this repository and use one of the following methods to build it. Commands should be executed from inside of the project home folder (i.e. the location of this README).
+To begin local development, clone the [PyTemplates/typer_cli](https://github.com/PyTemplate/typer_cli) repository and use one of the following methods to build it. Commands should be executed from inside of the project home folder.
 
-## Using poetry:
+## Using poetry
 
 ```bash
 poetry install
@@ -14,7 +14,7 @@ Install optional dependencies using the `--extras` flag:
 poetry install --extras=environment
 ```
 
-## Using pip:
+## Using pip
 
 ```bash
 pip install .
@@ -44,8 +44,10 @@ lint = [
 ]
 
 docs = [
-    "Sphinx",
-    "sphinx-rtd-theme",
+    "mkdocs",
+    "mkdocstrings",
+    "mkdocstrings-python",
+    "mkdocs-material",
 ]
 
 # Includes all optional dependencies
@@ -58,13 +60,15 @@ dev = [
     "pylint",
     "mypy",
     "pre-commit",
-    "Sphinx",
-    "sphinx-rtd-theme",
+    "mkdocs",
+    "mkdocstrings",
+    "mkdocstrings-python",
+    "mkdocs-material",
     "bump2version",
 ]
 ```
 
-## Using a local docker build:
+## Using a local docker build
 
 To build an image locally from the Dockerfile:
 

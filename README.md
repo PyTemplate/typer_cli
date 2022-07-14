@@ -35,14 +35,14 @@
 ### A production ready python CLI template
 
 - Metadata and dependency information is stored in the pyproject.toml for compatibility with both [pip](https://pip.pypa.io/en/stable/) and [poetry](https://python-poetry.org/docs/).
-- [Flake8](https://flake8.pycqa.org/en/latest/), [pylint](https://pylint.pycqa.org/en/latest/index.html), and [isort](https://pycqa.github.io/isort/), configurations are defined to be compatible with the [black](https://black.readthedocs.io/en/stable/) autoformatter.
+- [Flake8](https://flake8.pycqa.org/en/latest/), [pylint](https://pylint.pycqa.org/en/latest/index.html), and [isort](https://pycqa.github.io/isort/) configurations are defined to be compatible with the [black](https://black.readthedocs.io/en/stable/) autoformatter.
 - Pylint settings are based on the [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html) and adapted for black compatibility.
 - Linting tools run automatically before each commit using [pre-commit](https://pre-commit.com/), black, and isort.
 - Test coverage reports are generated during every commit and pull request using [coverage](https://coverage.readthedocs.io/en/6.4.1/) and [pytest-cov](https://pytest-cov.readthedocs.io/en/latest/). All reports are automatically uploaded and archived on [codecov.io](https://about.codecov.io/).
 - Unit tests are written using [pytest](https://docs.pytest.org/en/latest/) and static type checking is provided by [mypy](http://mypy-lang.org/index.html).
 - Package releases to [PyPI](https://pypi.org/) with dynamic versioning provided by [bump2version](https://github.com/c4urself/bump2version) begin automatically whenever a new tag is created in github.
 - Docker images are automatically published to [Docker Hub](https://hub.docker.com/) during every release. Images are tagged with a semantic version number which agrees with the git tag and the PyPI version number.
-- Documentation is built using [mkdocs](https://www.mkdocs.org/) and [mkdocstrings](https://mkdocstrings.github.io/). Automatically deployed to [github pages](https://docs.github.com/en/pages) during every release.
+- Documentation is built using [mkdocs](https://www.mkdocs.org/) and [mkdocstrings](https://mkdocstrings.github.io/). Docs are automatically deployed to [github pages](https://docs.github.com/en/pages) during every release.
 - Release notes are automatically generated during every release using [github actions](https://docs.github.com/en/actions).
 
 ### [Full Documentation](https://pytemplate.github.io/typer_cli/)
@@ -81,7 +81,7 @@ docker run --rm pytemplates/typer_cli version
 
 ## Developer Setup
 
-To begin local development, clone this repository and use one of the following methods to build it. Commands should be executed from inside of the project home folder (i.e. the location of this README).
+To begin local development, clone the PyTemplates/typer_cli repository and use one of the following methods to build it. Commands should be executed from inside of the project home folder.
 
 ### Using poetry
 
@@ -207,13 +207,31 @@ A release should consist of the following two steps from a tested, linted, and u
 
 ```bash
 .
-├── docs/
-├── LICENSE
-├── README.md
-├── Makefile
 ├── Dockerfile
+├── docs
+│   ├── app_reference
+│   │   └── app.md
+│   ├── code_reference
+│   │   ├── module1.md
+│   │   └── module2.md
+│   ├── developer_guide
+│   │   ├── commands.md
+│   │   ├── developer_setup.md
+│   │   ├── releases.md
+│   │   └── workflows.md
+│   ├── extras
+│   │   ├── credits.md
+│   │   └── file_tree.md
+│   ├── index.md
+│   └── user_guide
+│       ├── installation.md
+│       └── usage.md
+├── LICENSE
+├── Makefile
+├── mkdocs.yml
 ├── poetry.lock
 ├── pyproject.toml
+├── README.md
 ├── src
 │   └── pytemplates_typer_cli
 │       ├── core
@@ -221,8 +239,8 @@ A release should consist of the following two steps from a tested, linted, and u
 │       │   ├── module1.py
 │       │   └── module2.py
 │       ├── __init__.py
-│       ├── __version__.py
-│       └── main.py
+│       ├── main.py
+│       └── __version__.py
 └── tests
     ├── __init__.py
     ├── test_app.py
@@ -232,12 +250,12 @@ A release should consist of the following two steps from a tested, linted, and u
 
 ## Credits
 
-### Other python package templates
+## Other python package templates
 
 - [https://github.com/waynerv/cookiecutter-pypackage](https://github.com/waynerv/cookiecutter-pypackage)
 - [https://github.com/AllenCellModeling/cookiecutter-pypackage](https://github.com/AllenCellModeling/cookiecutter-pypackage)
 
-### Actions
+## Actions
 
 - [https://github.com/JamesIves/github-pages-deploy-action](https://github.com/JamesIves/github-pages-deploy-action)
 - [https://github.com/softprops/action-gh-release](https://github.com/softprops/action-gh-release)
