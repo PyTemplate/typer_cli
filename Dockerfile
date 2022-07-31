@@ -25,7 +25,7 @@ RUN poetry install --no-root --no-dev
 COPY src/ src/
 COPY README.md ./
 
-# Install it into the virtualenv
+# Install source code into the virtualenv
 # Installing with pip since poetry does editable installs by default
 SHELL ["/bin/bash", "-c"]
 RUN source .venv/bin/activate && pip install --upgrade pip
